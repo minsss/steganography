@@ -1,0 +1,3 @@
+/home/csrc/Desktop/image/CMakeFiles/edit_cache.dir
+/home/csrc/Desktop/image/CMakeFiles/rebuild_cache.dir
+/home/csrc/Desktop/image/CMakeFiles/image.dir
