@@ -33,6 +33,12 @@ msgProcess.hpp
 include/cryptProcess.hpp
 iostream
 -
+string
+-
+cstdlib
+-
+ctime
+-
 opencv2/opencv.hpp
 include/opencv2/opencv.hpp
 
@@ -44,5 +50,7 @@ include/opencv2/opencv.hpp
 
 include/msgProcess.hpp
 iostream
+-
+string
 -
 

@@ -1,11 +1,15 @@
 #include <iostream>
+#include <string>
+
+#define cMsg_MAX 512
 
 using namespace std;
 
 class Msg
 {
     private:
-	string message;
+	string sMsg;
+	char cMsg[cMsg_MAX];
 
     public:
 	Msg();
@@ -13,4 +17,7 @@ class Msg
 
 	void getMessage(string msg);
 	void setMessage();
+
+	char * String2Char();
+	void setAscii();
 };

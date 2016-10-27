@@ -24,14 +24,20 @@ int main(int argc, const char** argv)
         return -1;
     }
 
-    Image image1 = Image();
+    char * pMsg = 0;
+
+    Image image1 = Image();   //Image class init
+    Msg plaintext1 = Msg();   //Msg class init
+    Crypt steg1 = Crypt();
 
     image1.showSrcImage(src);
     //image1.showRGBValue(src);
 
-    Msg plaintext1 = Msg();
-
     plaintext1.setMessage();
+    pMsg = plaintext1.String2Char();
+    plaintext1.setAscii();
+
+    steg1.get_Steg_level1(pMsg);
 
 
     waitKey(0);
