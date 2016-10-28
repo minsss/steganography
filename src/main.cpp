@@ -16,6 +16,7 @@ int main(int argc, const char** argv)
     }
 
     Mat src; 
+    Mat dst;
     src = imread( argv[1] , CV_LOAD_IMAGE_COLOR);
 
     if(src.empty())
@@ -25,20 +26,24 @@ int main(int argc, const char** argv)
     }
 
     char * pMsg = 0;
+    unsigned int nMsgLength = 0;
 
     Image image1 = Image();   //Image class init
+    Image image2 = Image();
     Msg plaintext1 = Msg();   //Msg class init
     Crypt steg1 = Crypt();
 
-    image1.showSrcImage(src);
+    //image1.showImage(src);
     //image1.showRGBValue(src);
 
     plaintext1.setMessage();
     pMsg = plaintext1.String2Char();
+    nMsgLength = plaintext1.getMsglength();
     plaintext1.setAscii();
 
-    steg1.get_Steg_level1(pMsg);
-
+    dst = steg1.get_Steg_level1(pMsg, nMsgLength, src);
+    imwrite("steg1.jpg", dst);
+    image2.showImage(dst);
 
     waitKey(0);
 

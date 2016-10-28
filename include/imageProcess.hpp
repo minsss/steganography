@@ -13,7 +13,7 @@ class Image
     public:
 	Image();
 	~Image();
-	void showSrcImage(Mat img);
+	void showImage(Mat img);
 	void showRGBValue(Mat img);
 
 };

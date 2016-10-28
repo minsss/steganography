@@ -4,6 +4,8 @@
 #include <ctime>
 #include "opencv2/opencv.hpp"
 
+#define ADJUST 10
+
 using namespace cv;
 using namespace std;
 
@@ -17,6 +19,7 @@ class Crypt
 	Crypt();
 	~Crypt();
 
-	void get_Steg_level1(char * pMsg);
+	void getSplitMsg(char * pMsg);
+	Mat get_Steg_level1(char * pMsg, unsigned int Msglength, Mat src);   //stage 1
 
 };

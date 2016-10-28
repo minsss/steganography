@@ -21,6 +21,11 @@ void Msg::setMessage()
 	cout << sMsg << endl;
 }
 
+unsigned int Msg::getMsglength()
+{
+    return sMsg.length();
+}
+
 char * Msg::String2Char()
 {
     for (int i = 0; i < sMsg.length(); i++)

@@ -18,6 +18,8 @@ class Msg
 	void getMessage(string msg);
 	void setMessage();
 
+	unsigned int getMsglength();
+
 	char * String2Char();
 	void setAscii();
 };
