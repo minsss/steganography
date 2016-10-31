@@ -28,7 +28,7 @@ int main(int argc, const char** argv)
     char * pMsg = 0;
     unsigned int nMsgLength = 0;
 
-    Image image1 = Image();   //Image class init
+    //Image image1 = Image();   //Image class init
     Image image2 = Image();
     Msg plaintext1 = Msg();   //Msg class init
     Crypt steg1 = Crypt();
@@ -41,8 +41,12 @@ int main(int argc, const char** argv)
     nMsgLength = plaintext1.getMsglength();
     plaintext1.setAscii();
 
-    dst = steg1.get_Steg_level1(pMsg, nMsgLength, src);
-    imwrite("steg1.jpg", dst);
+    //dst = steg1.get_Steg_level1(pMsg, nMsgLength, src);
+    //imwrite("steg1.jpg", dst);
+    //image2.showImage(dst);
+
+    dst = steg1.get_Steg_level2(pMsg, nMsgLength, src);
+    imwrite("steg2.jpg", dst);
     image2.showImage(dst);
 
     waitKey(0);
