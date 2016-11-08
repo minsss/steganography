@@ -7,13 +7,11 @@ using namespace std;
 class Image
 {
     private:
-	int x;
-	int y;
 
     public:
 	Image();
 	~Image();
-	void showImage(Mat img);
+	void showImage(Mat img, char *name, unsigned int w, unsigned int h);
 	void showRGBValue(Mat img);
 
 };

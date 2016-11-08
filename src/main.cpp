@@ -25,29 +25,31 @@ int main(int argc, const char** argv)
         return -1;
     }
 
+
+/*SourceImage-------------------------------------------------------*/
+    
+    Image *image1;   //Image class init
+    image1->showImage(src, "src", 100, 100);
+
+/*Text--------------------------------------------------------------*/
+
+    Msg *plaintext1 = new Msg();;   //Msg class init
     char * pMsg = 0;
     unsigned int nMsgLength = 0;
 
-    //Image image1 = Image();   //Image class init
-    Image image2 = Image();
-    Msg plaintext1 = Msg();   //Msg class init
-    Crypt steg1 = Crypt();
+    plaintext1->setMessage();
+    pMsg = plaintext1->String2Char();
+    nMsgLength = plaintext1->getMsglength();
+    plaintext1->setAscii();
 
-    //image1.showImage(src);
-    //image1.showRGBValue(src);
+/*Steganogrphy------------------------------------------------------*/
 
-    plaintext1.setMessage();
-    pMsg = plaintext1.String2Char();
-    nMsgLength = plaintext1.getMsglength();
-    plaintext1.setAscii();
+    Crypt *steg1 = new Crypt();   //steganography init
+    Image *image2;   //dst Image init
 
-    //dst = steg1.get_Steg_level1(pMsg, nMsgLength, src);
-    //imwrite("steg1.jpg", dst);
-    //image2.showImage(dst);
-
-    dst = steg1.get_Steg_level2(pMsg, nMsgLength, src);
+    dst = steg1->get_Steg_level2(pMsg, nMsgLength, src);
     imwrite("steg2.jpg", dst);
-    image2.showImage(dst);
+    image2->showImage(dst, "dst", 600, 100);
 
     waitKey(0);
 

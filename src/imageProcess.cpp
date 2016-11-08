@@ -10,14 +10,14 @@ Image::~Image()
 
 }
 
-void Image::showImage(Mat img)
+void Image::showImage(Mat img, char * name, unsigned int w, unsigned int h)
 {
     //Mat imgH = img + Scalar(75, 75, 75); //increase the brightness by 75 units
     //Mat imgL = img + Scalar(-75, -75, -75); //decrease the brightness by 75 units
 
-    namedWindow("Image", CV_WINDOW_AUTOSIZE);
-    moveWindow("Image", 100, 100);
-    imshow("Image", img);
+    namedWindow(name, CV_WINDOW_AUTOSIZE);
+    moveWindow(name, w, h);
+    imshow(name, img);
 }
 
 void Image::showRGBValue(Mat img)
