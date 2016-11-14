@@ -7,11 +7,13 @@ set( NAME_SRC
 	src/imageProcess.cpp
 	src/msgProcess.cpp
 	src/cryptProcess.cpp
+	src/decoder.cpp
 )
 set( NAME_HEADERS
 	include/imageProcess.hpp
 	include/msgProcess.hpp
 	include/cryptProcess.hpp
+	include/decoder.hpp
 )
 
 INCLUDE_DIRECTORIES( ${CMAKE_CURRENT_SOURCE_DIR}/include )

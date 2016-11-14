@@ -69,7 +69,7 @@ Mat Crypt::get_Steg_level1(char * pMsg, unsigned int Msglength, Mat src)
 	    for(int c = 0; c < 3; c++)
 	    {
 		//j - (src.rows/3 + ADJUST) = 0
-		dst.at<Vec3b>(j, i)[c] = saturate_cast<uchar>(src.at<Vec3b>(j, i)[c] + pMsg[j - (src.rows/3 + STEG1_ADJUST_ROWS)]);
+		dst.at<Vec3b>(j, i)[c] = saturate_cast<uchar>(dst.at<Vec3b>(j, i)[c] + pMsg[j - (src.rows/3 + STEG1_ADJUST_ROWS)]);
 	    }
 	    //cout << "(" << i << ", " << j << ")" << endl;
 	}

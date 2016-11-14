@@ -150,6 +150,33 @@ src/cryptProcess.cpp.s:
 	$(MAKE) -f CMakeFiles/image.dir/build.make CMakeFiles/image.dir/src/cryptProcess.cpp.s
 .PHONY : src/cryptProcess.cpp.s
 
+src/decoder.o: src/decoder.cpp.o
+
+.PHONY : src/decoder.o
+
+# target to build an object file
+src/decoder.cpp.o:
+	$(MAKE) -f CMakeFiles/image.dir/build.make CMakeFiles/image.dir/src/decoder.cpp.o
+.PHONY : src/decoder.cpp.o
+
+src/decoder.i: src/decoder.cpp.i
+
+.PHONY : src/decoder.i
+
+# target to preprocess a source file
+src/decoder.cpp.i:
+	$(MAKE) -f CMakeFiles/image.dir/build.make CMakeFiles/image.dir/src/decoder.cpp.i
+.PHONY : src/decoder.cpp.i
+
+src/decoder.s: src/decoder.cpp.s
+
+.PHONY : src/decoder.s
+
+# target to generate assembly for a file
+src/decoder.cpp.s:
+	$(MAKE) -f CMakeFiles/image.dir/build.make CMakeFiles/image.dir/src/decoder.cpp.s
+.PHONY : src/decoder.cpp.s
+
 src/imageProcess.o: src/imageProcess.cpp.o
 
 .PHONY : src/imageProcess.o
@@ -243,6 +270,9 @@ help:
 	@echo "... src/cryptProcess.o"
 	@echo "... src/cryptProcess.i"
 	@echo "... src/cryptProcess.s"
+	@echo "... src/decoder.o"
+	@echo "... src/decoder.i"
+	@echo "... src/decoder.s"
 	@echo "... src/imageProcess.o"
 	@echo "... src/imageProcess.i"
 	@echo "... src/imageProcess.s"

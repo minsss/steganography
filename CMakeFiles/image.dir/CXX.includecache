@@ -10,6 +10,10 @@
 cryptProcess.hpp
 /home/csrc/Desktop/image/src/cryptProcess.hpp
 
+/home/csrc/Desktop/image/src/decoder.cpp
+decoder.hpp
+/home/csrc/Desktop/image/src/decoder.hpp
+
 /home/csrc/Desktop/image/src/imageProcess.cpp
 imageProcess.hpp
 /home/csrc/Desktop/image/src/imageProcess.hpp
@@ -25,12 +29,26 @@ cryptProcess.hpp
 /home/csrc/Desktop/image/src/cryptProcess.hpp
 msgProcess.hpp
 /home/csrc/Desktop/image/src/msgProcess.hpp
+decoder.hpp
+/home/csrc/Desktop/image/src/decoder.hpp
 
 /home/csrc/Desktop/image/src/msgProcess.cpp
 msgProcess.hpp
 /home/csrc/Desktop/image/src/msgProcess.hpp
 
 include/cryptProcess.hpp
+iostream
+-
+string
+-
+cstdlib
+-
+ctime
+-
+opencv2/opencv.hpp
+include/opencv2/opencv.hpp
+
+include/decoder.hpp
 iostream
 -
 string

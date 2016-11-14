@@ -4,11 +4,15 @@
 CMakeFiles/image.dir/src/cryptProcess.cpp.o: src/cryptProcess.cpp
 CMakeFiles/image.dir/src/cryptProcess.cpp.o: include/cryptProcess.hpp
 
+CMakeFiles/image.dir/src/decoder.cpp.o: src/decoder.cpp
+CMakeFiles/image.dir/src/decoder.cpp.o: include/decoder.hpp
+
 CMakeFiles/image.dir/src/imageProcess.cpp.o: src/imageProcess.cpp
 CMakeFiles/image.dir/src/imageProcess.cpp.o: include/imageProcess.hpp
 
 CMakeFiles/image.dir/src/main.cpp.o: src/main.cpp
 CMakeFiles/image.dir/src/main.cpp.o: include/cryptProcess.hpp
+CMakeFiles/image.dir/src/main.cpp.o: include/decoder.hpp
 CMakeFiles/image.dir/src/main.cpp.o: include/imageProcess.hpp
 CMakeFiles/image.dir/src/main.cpp.o: include/msgProcess.hpp
 

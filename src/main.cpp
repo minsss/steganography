@@ -3,6 +3,7 @@
 #include "imageProcess.hpp"
 #include "cryptProcess.hpp"
 #include "msgProcess.hpp"
+#include "decoder.hpp"
 
 using namespace cv;
 using namespace std;
@@ -33,7 +34,7 @@ int main(int argc, const char** argv)
 
 /*Text--------------------------------------------------------------*/
 
-    Msg *plaintext1 = new Msg();;   //Msg class init
+    Msg *plaintext1 = new Msg();   //Msg class init
     char * pMsg = 0;
     unsigned int nMsgLength = 0;
 
@@ -47,9 +48,19 @@ int main(int argc, const char** argv)
     Crypt *steg1 = new Crypt();   //steganography init
     Image *image2;   //dst Image init
 
-    dst = steg1->get_Steg_level2(pMsg, nMsgLength, src);
-    imwrite("steg2.jpg", dst);
+    dst = steg1->get_Steg_level1(pMsg, nMsgLength, src);
+    imwrite("steg1.jpg", dst);
     image2->showImage(dst, "dst", 600, 100);
+
+    //dst = steg1->get_Steg_level2(pMsg, nMsgLength, src);
+    //imwrite("steg2.jpg", dst);
+    //image2->showImage(dst, "dst", 600, 100);
+
+/*Decoder-----------------------------------------------------------*/
+
+    Decode *de1 = new Decode();
+
+    de1->decode_Steg_level1(src, dst);
 
     waitKey(0);
 

@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/image.dir/src/imageProcess.cpp.o"
   "CMakeFiles/image.dir/src/msgProcess.cpp.o"
   "CMakeFiles/image.dir/src/cryptProcess.cpp.o"
+  "CMakeFiles/image.dir/src/decoder.cpp.o"
   "bin/image.pdb"
   "bin/image"
 )
